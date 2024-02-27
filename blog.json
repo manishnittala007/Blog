@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "img": "/images/tech.jpg",
-    "profileimg": "/images/profile.jpg",
+    "img": "images/tech.jpg",
+    "profileimg": "images/profile.jpg",
     "category": "Technology",
     "author": "John Doe",
     "role": "Software Engineer",
@@ -15,8 +15,8 @@
   },
   {
     "id": 2,
-    "img": "/images/tech.jpg",
-    "profileimg": "/images/profile.jpg",
+    "img": "images/tech.jpg",
+    "profileimg": "images/profile.jpg",
     "category": "Culture",
     "author": "Alice Smith",
     "role": "Content Creator",
