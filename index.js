@@ -119,9 +119,23 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             allBlogsData = data; 
             loadblogs(data, 'blogContainer');
+            var allHeadings = allBlogsData.map(head => head.heading.toLowerCase());
+            console.log(allHeadings);
+            populateSuggestionList(allHeadings);
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+// Function to populate the suggestion list
+function populateSuggestionList(headings) {
+    var suggestionList = document.getElementById('suggestion-list');
+    suggestionList.innerHTML = ''; // Clear existing options
+
+    headings.forEach(headingtitle => {
+        var option = document.createElement('option');
+        option.value = headingtitle;
+        suggestionList.appendChild(option);
+    });
+}
 // Function to load blogs into the specified container
 function loadblogs(data, containerId) {
     var container = document.getElementById(containerId);
