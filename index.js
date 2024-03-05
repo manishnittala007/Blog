@@ -280,7 +280,7 @@ function loadblogs(data, containerId) {
 
             card.appendChild(img);
             card.appendChild(cardBody);
-
+            //immediately-invoked function expression (IIFE).
             (function (currentBlogId) {
                 card.addEventListener('click', function () {
                     redirectToIndividualPage(currentBlogId);
